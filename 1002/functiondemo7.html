@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Nested Function Demo</title>
+	<meta charset="utf-8">
+</head>
+<body>
+	<script type="text/javascript">
+		function outer(){
+				var su = 5;
+			function inner(){
+				var str = 'hello';
+				document.write('su = ' + su);
+			}
+			inner();
+		}
+		outer();
+	</script>
+</body>
+</html>

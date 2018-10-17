@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Submit Demo</title>
+	<meta charset="utf-8">
+</head>
+<body>
+	<!-- HTML5 의 Submit
+	1. formmethod, formaction, formenctype 속성 추가
+	 -->
+	<form name='myform'>
+		Name : <input type="text" name="username" > <br>
+		Age  : <input type="text" name="userage" ><br>
+		<input type="submit"  value="가입하기" formaction="/1010/regester.html" formmethod="POST">
+		<input type="submit"  value="수정하기" formaction="/Update" formmethod="GET">
+	</form>
+</body>
+</html>

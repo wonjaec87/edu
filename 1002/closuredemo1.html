@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>closure Demo</title>
+	<meta charset="utf-8">
+	<script type="text/javascript">
+		function Outer(whom){
+			//return whom + '! good morning';
+			 function Inner(greeting){
+				document.write(whom +'  ' + greeting);
+			}
+			return Inner;
+		}
+		var jimin = Outer('jimin');
+		jimin('hello');
+		var mija = Outer('Mija');
+		mija('how are you');
+	</script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Drag and Drop Demo</title>
+	<script type="text/javascript">
+		window.addEventListener('load', init);
+		function init(){
+			document.getElementById('myimage').addEventListener('dragstart', 
+				function(evt){
+					//evt.dataTransfer.dropEffect = 'move';
+					evt.dataTransfer.setData("myflag", this.id);
+					console.log("dragstart id = " + this.id);
+					document.getElementById('original').style.border = '3px dotted red';
+			},false);
+			document.getElementById('destination').addEventListener('dragenter', 
+				function(evt){
+					this.style.border = '5px dashed blue';
+			});
+			document.getElementById('destination').addEventListener('dragleave', 
+				function(evt){
+					this.style.border = '1px solid #000';
+			});
+			document.getElementById('destination').addEventListener('dragover', 
+				function(evt){
+					if(evt.preventDefault)  evt.preventDefault();
+					else return false;
+			});
+			document.getElementById('destination').addEventListener('drop', 
+				function(evt){
+					if(evt.preventDefault)  evt.preventDefault();
+					if(evt.stopPropagation)   evt.stopPropagation();
+					var tempId = evt.dataTransfer.getData('myflag');//Image's id
+					var obj = document.getElementById(tempId);  //Image Object
+					obj.parentNode.removeChild(obj);
+					this.appendChild(obj);
+			});
+			document.getElementById('myimage').addEventListener('dragend', 
+				function(evt){
+					console.log("drag end 발생");
+					document.getElementById('original').style.border = '';
+					document.getElementById('destination').style.border = '';
+			});
+		}
+	</script>
+	<style type="text/css">
+		div{
+			display: inline; float:left; margin:10px;
+			width:250px;  height:250px;
+			padding:10px;  border:1px solid black;
+		}
+	</style>
+</head>
+<body>
+	<h1>Drag and Drop Demo</h1>
+	<div id="original">	
+		<img src="images/check.png" draggable="true" width="200" height="200" id='myimage'>
+	</div>&nbsp;&nbsp;&nbsp;
+	<div id='destination'></div>
+</body>
+</html>

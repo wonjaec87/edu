@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>function Demo</title>
+	<meta charset="utf-8">
+	<script type="text/javascript">
+		function change(array1, car1){
+			array1.push("remon"); array1.unshift('phph');
+			car1.name = 'Carnival';
+		}
+	</script>
+</head>
+<body>
+	<script type="text/javascript">
+		var array =['Apple','Mango','banana','grape'];
+		var car = {name:'sonata', price:250000000, maker:'hyundai'};
+		document.write("변경전 array = " + array +"<br>" +"car = " + car.name + '<br>');
+		change(array,car);
+		document.write("변경후 array = " + array +"<br>" +"car = " + car.name + '<br>');
+	</script>
+</body>
+</html>

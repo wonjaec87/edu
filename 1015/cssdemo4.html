@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>jQuery CSS Demo</title>
+	<meta charset="utf-8">
+	<script src="script/jquery.js"></script>
+	<script>
+		$(document).ready(function(){
+			$('div').mouseover(function(){
+				$(this).addClass('wow');
+			});
+			$('div').mouseout(function(){
+				$(this).removeClass('wow');
+			});
+		});
+	</script>
+	<style type="text/css">
+		div{width: 300px; height: 300px; background-color: yellow;}
+		.wow{ background-color: cyan; font-size: 2em; }
+	</style>
+</head>
+<body>
+	<div>
+		여기에 마우스를 올려보세요
+	</div>
+
+</body>
+</html>

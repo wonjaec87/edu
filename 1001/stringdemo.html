@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>String Object Demo</title>
+	<meta charset="utf-8">
+</head>
+<body>
+	<script type="text/javascript">
+		var str = "Hello world";
+		document.write(str.substring(1,5) + '<br>');
+		document.write(str.slice(1,5) + '<br>');
+		document.write(str.substr(1,4) + '<br>');
+		var url = "http://localhost/1001/result.html?id=wonjae&passwd=1234";
+		var idx = url.indexOf('?');
+		var str = url.substring(idx +1);
+		document.write(str+'<br>');
+		var array = str.split('&');
+		document.write("아이디 = " + array[0].split('=')[1]);
+		document.write("비밀번호 = " + array[1].split('=')[1]);
+	</script>
+</body>
+</html>

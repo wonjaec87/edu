@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>성적처리 결과 창</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+	h1{
+		text-align: center;
+	}
+</style>
+	<script src='script/student.js'></script>
+	<script src='script/calc.js'></script>
+	<script src='script/output.js'></script>
+	<script type="text/javascript">
+		window.onload = setup;
+		function setup(){
+			var str = window.location.search;
+			str = str.substring(1);
+			var array = str.split('&'); //split &기준으로 자르기
+			var student = new Student();
+			student.hakbun= array[0].split('=')[1];
+			student.irum = decodeURI(array[1]).split('=')[1];
+			student.kor = parseInt(array[2].split('=')[1]);
+			student.eng = parseInt(array[3].split('=')[1]);
+			student.mat = parseInt(array[4].split('=')[1]);
+			student.edp = parseInt(array[5].split('=')[1]);
+			calc(student);
+			output(student);
+
+		}
+	</script>
+	
+</head>
+<body>
+	
+
+</body>
+</html>

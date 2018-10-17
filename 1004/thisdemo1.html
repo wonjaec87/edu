@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>this Demo</title>
+	<meta charset="utf-8">
+	<script type="text/javascript">
+		window.addEventListener('load',init);
+		function init(){
+			//document.myform.txtSoure.addEventListener('change',copy); //탭
+			document.myform.txtSoure.addEventListener('blur',copy); //포커스를 잃을때
+
+		}
+
+		function copy(){
+			document.myform.txtTarget.value = this.value;
+		}
+	</script>
+</head>
+<body>
+	<form name = 'myform'>
+		Source : <input type="text" name="txtSoure">
+		Target : <input type="text" name="txtTarget">
+	</form>
+</body>
+</html>

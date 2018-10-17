@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>jQuery Manipulation Demo</title>
+<script src="script/jquery.min.js"></script>
+<script>
+	$().ready(function(){
+	//$('#container >p:eq(1)').empty();//p 태그를 남기고 내용물만지우는것
+	$('#container >p:eq(1)').remove(); //해당 p태그를 지우는것
+	
+	});
+</script>
+</head>
+<body>
+
+	<div id="container">
+	<p>Apple</p>
+	<p>Mango</p>
+	<p>Grape</p>
+	</div>
+
+</body>
+</html>

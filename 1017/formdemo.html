@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>jQuery Form Demo</title>
+	<script src="script/jquery.min.js"></script>
+	<script>
+		$(function(){
+			$('#btnsend').click(function(){
+					alert('귀하의 성은 ' + $(':checked').val() + '이군요.')
+			});
+		});
+		/*window.onload = function(){
+			document.getElementById('btnsend').onclick =function(){
+				var genders = document.getElementsByName('gender');
+				//console.log(genders[0].checked);
+				//console.log(genders[1].checked);
+				var str = '귀하의 성별은 '
+				if(genders[0].checked) str+= '남성입니다.'
+					else str+= '여성입니다.'
+						alert(str);*/
+
+				
+			
+		
+	</script>
+</head>
+<body>
+	Gender: 
+		<input type="radio" name="gender" value="남성">남성
+		<input type="radio" name="gender" value="여성">여성<br/>
+		<input type="button" id="btnsend" value="전송">
+</body>
+</html>

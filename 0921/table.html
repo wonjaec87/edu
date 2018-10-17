@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Table style</title>
+    <style type="text/css">
+    table{
+        border-collapse: collapse;
+        width: 50%; height: 200px
+    }
+    table,td,th {
+        /* border-width: 1px;
+        border-style: solid;
+        border-color: red; */
+        border : 1px solid black;
+        caption-side: bottom; 
+    }
+    td {
+        /* text-align: center; */
+        padding:10px;
+    }
+    tbody > tr:nth-child(2)> td:nth-child(2){
+        background-color: red; color:white;
+    }
+   
+    th {
+        background-color:rgb(195, 255, 255); 
+    }
+    caption{
+        font-size: 2em; 
+    }
+    </style>
+</head>
+<body>
+    <table border=1>
+        <caption>월별 매출액 </caption>
+            <colgroup>
+            <col>
+            <col>
+            <col style="background-color: yellow;">
+            </colgroup>
+            <thead>
+            <tr>
+                <th>월</th>
+                <th>매출액</th>
+                <th>비고</th>
+            </tr>
+            </thead>
+            <tfoot>
+                <tr>
+                    <th>합계</th>
+                    <td colspan="2">￦22,000,000</td>
+                </tr>
+            </tfoot>
+            <tbody>
+                <tr>
+                    <td>8</td><td>￦10,000,000</td><td></td>
+                </tr>
+                <tr>
+                     <td>9</td><td>￦12,000,000</td><td>20%증가</td>
+                </tr>
+            </tbody>
+        
+
+
+    </table>
+</body>
+</html>

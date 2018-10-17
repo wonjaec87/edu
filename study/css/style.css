@@ -1,0 +1,22 @@
+h1 { 
+   text-align: center; 
+   text-decoration: underline;
+}
+table {
+   margin: auto; 
+   margin-left: auto;
+}
+div {
+   text-align: center;
+}
+tbody > tr > th {
+   color: white;
+   background-color: blue;
+}
+hr {
+   width: 20%;
+}
+
+#txtNum, #txtName, #txtGibon, #txtNightsal, #txtFam{
+background-color: yellow;
+}

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>window objec demo</title>
+	<meta charset="utf-8">
+	<script type="text/javascript">
+		window.addEventListener('load',init,false);
+		function init(){
+			document.getElementById('btnOpen').addEventListener('click',myopen);
+			document.getElementById('btnSend').addEventListener('click',send);
+		}
+		function send(){
+			var message = document.getElementById('txtMsg').value;
+			w.document.myform.message_window.value += message + '\n';
+		}
+		function myopen(){
+			w = window.open('child.html','_blank', 'width=500,height=230');
+		}
+	</script>
+</head>
+<body>
+	<p><button type="button"id="btnOpen">Open</button></p>
+	<p>Message : <input type="text" size="50" id="txtMsg" >
+	<input type="button" id="btnSend" value="Send">
+	</p>
+</body>
+</html>

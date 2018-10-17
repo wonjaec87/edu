@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Progress Demo</title>
+	<meta charset="utf-8">
+	<script type="text/javascript">
+		window.addEventListener('load',init,false);
+		var su = 0;
+		function init(){
+			var pgress = document.querySelector('#progressBar');
+		pgress.max = 100;
+		pgress.value = ++su;
+		document.querySelector('#result').innerHTML = Math.floor(pgress.position * 100) + '%완료됨';
+		setTimeout(init,1000);
+		}false;
+	</script>
+</head>
+<body>
+	Download : <progress id="progressBar" value="22" max="100"></progress><br>
+	진행률 : <output id="result"></output>
+
+</body>
+</html>

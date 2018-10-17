@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Output Tag Demo</title>
+	<meta charset="utf-8">
+	<script type="text/javascript">
+		
+	</script>
+</head>
+<body>
+	<form name='myform' oninput="result.value=myrange.valueAsNumber + mynumber.valueAsNumber">
+		<input type="range" name="myrange" value="22" min="" max="100"> + 
+		<input type="number" name="mynumber" value="50" min="0" max="100"> = 
+		<output id="result" for="myrange mynumber"></output>
+		
+	</form>
+</body>
+</html>

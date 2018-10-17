@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Object Demo</title>
+	<meta charset="utf-8">
+
+
+<script>
+	var telephone = {
+		gubun : null, tel : null, irum : null, amount : null, gibon : null, fee : null, tax : null, sum : null, 
+		setGibon : function(){
+			switch(this.gubun) {
+				case 1 : this.gibon = 6000; break;
+				case 2 : this.gibon = 4800; break;
+				case 3 : this.gibon = 3000; break;
+			}
+		},
+		setfee : function(){ this.fee = this.amount * 12; },
+		setTax : function(){ this.tax = (this.gibon + this.fee) *0.1;},
+		setSum : function(){ this.sum = this.gibon + this.fee + this.tax;},
+		toString : function(){
+		 document.write('<ul>');
+		 for(var property in this){
+		 	if(typeof this[property] != 'function'){
+		 		document.write('<li>' + property + '-->' + this[property] + '</li>');
+		 	}
+		 } 
+		 document.write('</ul>');
+		}
+	};
+</script>
+</head>
+<body>
+	<script>
+	//2   422-5123   박은지   1084
+	telephone.gubun = 2;
+	telephone.tel = '422-5123';
+	telephone.irum = '박은지';
+	telephone.amount = 1084;
+	telephone.setGibon();
+	telephone.setfee();
+	telephone.setTax();
+	telephone.setSum();
+	telephone.toString();
+</script>
+</body>
+</html>

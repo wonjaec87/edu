@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Function Demo</title>
+	<meta charset="utf-8">
+	<script type="text/javascript">
+		function calcSum(start, end){
+			var i, sum = 0;
+			for(i=start; i<=end; i++){
+				sum += i;
+			}
+			document.write(start + "부터"+ end +"까지의 합은 " + sum + "입니다.<br>");
+		}
+	</script>
+</head>
+<body>
+<script type="text/javascript">
+	//calcSum();
+	calcSum(50,80);
+	calcSum(10,30);
+</script>
+</body>
+</html>

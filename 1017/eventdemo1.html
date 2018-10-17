@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>jQuery Event Demo</title>
+	<script src="script/jquery.min.js"></script>
+	<script>
+		$(function(){
+		$('div').click(function(){
+			$(this).attr('style', 'background-color:blue;width:500px;height:500px');
+			});
+			$('button').click(function(){
+			$(this).attr('style','background-Color:orange;').text('Hello, World');
+			evt.stopPropagation();
+			});
+		});
+
+	</script>
+	<style type="text/css">
+		body{ background-color: yellow }
+		div{ background-color: cyan; width:400px; height: 400px}
+		button{ background-color: red; width:200px; height: 200px; }
+	</style>
+</head>
+<body>
+	<h1> Event Flow </h1>
+	<div>
+		<button>Click me</button>
+	</div>
+</body>
+</html>

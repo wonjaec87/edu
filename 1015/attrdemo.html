@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>jQuery Attibute Demo</title>
+	<meta charset="utf-8">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			var str = "<ul>";
+			str += "<li>Source: " + $('img').attr('src') + '</li>';
+			str += "<li>넓이 : " + $('img').attr('width') + 'px</li>';
+			str += "<li>높이 : " + $('img').attr('height') + 'px</li>';
+			str += "</ul>";
+			$('output').html(str);
+			$('img').click(function(){
+				$(this).attr('src','images/tiger2.jpg');
+				$(this).attr('width','450px');
+				$(this).attr('height','400px');
+			});
+			});
+	</script>
+</head>
+<body>
+	<img src="images/tiger.jpg" width="450px" height="400px">
+	<output name="result"></output>
+</body>
+</html>

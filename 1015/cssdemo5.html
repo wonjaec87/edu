@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>jQuery CSS Demo</title>
+	<meta charset="utf-8">
+	<script src="script/jquery.js"></script>
+	<script>
+		$(document).ready(function(){
+			if($('h1').hasClass('myclass')) $('h1').removeClass('myclass');
+			else $('h1').addClass('myclass');
+		});
+	</script>
+	<style type="text/css">
+		.myclass{background-color: green; color: gray; font-size: 2em; text-decoration: underline;}
+	</style>
+</head>
+<body>
+	<h1 class='myclass'>Hello jQuery~!</h1>
+</body>
+</html>

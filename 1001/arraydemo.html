@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Array Object Demo</title>
+	<meta charset="utf-8">
+</head>
+<body>
+	<script type="text/javascript">
+		/*var array = new Array();
+		array[0] = "Apple"; array[1] = "Mango"; array[2] = 'Grape'; array[3] = "pine apple";
+		document.write(array.join('<br>'));*/
+
+		var array = [];
+		array.push('Java');
+		array.unshift('c-language');
+		array.push('c#');
+		array.unshift('COBOL');
+		document.write(array + '<br>');
+		array.splice(1,2,"mango","banana");
+		document.write(array + '<br>');
+		/*
+			splice() : 3가지, insert, remove, replace
+			1. insert : howmany -- > 0
+			2. remove : howmany > 0 
+			3. replace : howmany <= item의 갯수
+		*/
+		/*document.write(array.pop() + '<br>');
+		document.write(array.slice(1,3) + '<br>');
+		document.write(array.length);*/
+	</script>
+</body>
+</html>

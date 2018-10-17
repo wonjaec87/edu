@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Digital Watch</title>
+	<script>
+		window.onload = init;
+		function init(){
+			document.getElementById('btnStart').onclick = mystart;
+			document.getElementById('btnStop').onclick = mystop;
+		}
+		var mytimer = null;
+		function mystart(){
+			var now = new Date();
+			document.getElementById('myclock').innerHTML = now.toLocaleString();	
+			mytimer = window.setTimeout(mystart, 1000);
+		}
+		function mystop(){
+			window.clearTimeout(mytimer);
+		}
+	</script>
+</head>
+<body>
+	<div>
+		<button type="button" id='btnStart'>Start</button>
+		<button type="button" id='btnStop'>Stop</button>
+	</div>
+	<output id="myclock"></output>
+</body>
+</html>

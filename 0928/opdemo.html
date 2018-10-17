@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JavaScript Operator Demo</title>
+	<meta charset="utf-8">
+</head>
+<body>
+	<script type="text/javascript">
+		var Member = function(name,age){
+			this.name = name;
+			this.age = age;
+		};
+		
+		var chulsu = new Member('김철수',24);
+		var younghee = new Member('김영희',25);
+
+		document.write('철수의 이름과 나이는 ' + chulsu.name + ',' + chulsu.age + '입니다.'+"<br>" );
+		document.write('영희의 이름과 나이는 ' + younghee["name"] + ','+ younghee["age"] + '입니다.'+"<br>");
+	</script>
+</body>
+</html>

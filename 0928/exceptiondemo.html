@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Exception Demo</title>
+	<meta charset="utf-8">
+</head>
+<body>
+<script type="text/javascript">
+	var num =null;
+	num = parseInt(prompt('정수를 입력해 주세요.: '));
+	if(num < 5 || num > 10 ){
+		document.write('  5이상 10이하로 입력해라 <br>');
+	}
+	try{
+		if(num < 0) throw new Error("반드시 양의 정수를 입력해야하니다.");
+	document.write('입력값은 = ' + num + "<br>");
+}catch(error){
+	document.write('error 발생 <br>');
+	document.write(error.message + '<br>');
+}finally{
+	document.write("항상수행")
+}
+</script>
+</body>
+</html>

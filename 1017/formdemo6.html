@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>jQuery Form Demo</title>
+		<script src="script/jquery.min.js"></script>
+		<script>
+			$(function(){
+				$(':input').focus(function(){
+					$(this).css("background-color", "yellow");
+					$(this).after('<span>필수 입력사항입니다.</span>');
+					$('span').css({"color" : "red", "font-weight" : 900});
+				}).blur(function(){
+					$(this).css("background-color", "");
+					$('span').remove();
+				});
+				$('form').submit(function(evt){
+					if(!$('#username').val()){
+						$('#username').css('border', '1px dotted red')
+						.after("<span style='color:red'>이름을 입력해 주세요.</span>");
+						return false
+					}
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<form name='myform' action='result.html' method='GET'>
+			Name(필수) : <input type="text" id="username" name="username"><br>
+			Age : <input type="number" name="userage"><br>
+			Gender : <input type="radio" name="gender" value="male">남성 &nbsp;&nbsp; 
+			<input type="radio" name="gender" value="female">여성 &nbsp;&nbsp; <br>
+			Hoby : <input type="checkbox" name="hobby" value="등산">등산<br>
+			<input type="checkbox" name="hobby" value="배구">배구<br>
+			<input type="checkbox" name="hobby" value="야구">야구<br>
+			<input type="checkbox" name="hobby" value="농구">농구<br>
+			<input type="checkbox" name="hobby" value="축구">축구<br>
+			<input type="checkbox" name="hobby" value="게임">게임<br>
+			<button type='submit'>Send</button>
+			<button type='reset'>Reset</button>
+		</form>
+	</body>
+</html>

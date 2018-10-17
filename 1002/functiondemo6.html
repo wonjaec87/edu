@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Callback Function Demo</title>
+	<meta charset="utf-8">
+	<script type="text/javascript">
+		window.onload = setup;
+
+	function setup(){ //나눈거
+		document.getElementById('clickme').onclick = clickme;
+	}
+	function clickme(){
+			document.body.style.backgroundColor = 'yellow';
+}
+		/*window.onload = setup; //합친거
+		function setup(){
+		document.getElementById('clickme').onclick = function(){
+			document.body.style.backgroundColor = 'yellow';
+		}
+	}*/
+	</script>
+</head>
+<body>
+	<button type="button" id="clickme">클릭</button>
+</body>
+</html>

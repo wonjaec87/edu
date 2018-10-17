@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Operator Demo</title>
+	<meta charset="utf-8">
+</head>
+<body>
+<script type="text/javascript">
+	var su = -128;
+	document.write('su = ' + su.toString(2) + '<br>');
+	document.write('su >> 3 = ' + (su>>3).toString(2) + '<br>');
+	document.write('su >>> 3 = ' + (su>>>3).toString(2) + '<br>');
+
+
+	document.write("'3' == 3 --> " + ("3"==3) + '<br>');
+	document.write("'3' === 3 --> " + ("3"===3) + '<br>');
+
+
+	var su2;
+	var num = null;
+	document.write("'null' == undefined --> " + (su2==num) + '<br>');
+	document.write("'null' == undefined --> " + (su2===num) + '<br>');
+
+	var car = {name:'Mariz',maker:'Daewoo'}
+	document.write((name in car) +'<br>');
+	document.write(('name' in car) +'<br>');
+
+
+	var array = ['Apple','Mango','lemon','grape'];
+	document.write((1 in array) + '<br>');
+	document.write((4 in array) + '<br>');
+
+	var str = 'Hello world';
+	var str1 = new String("hello world");
+	var array2 = ['Apple','Mango','lemon','grape'];
+	var car2 = {name:'Mariz',maker:'Daewoo'}
+	if(str instanceof Object) document.write('true' + '<br>');
+	else document.write('false' + '<br>');
+	
+</script>
+</body>
+</html>

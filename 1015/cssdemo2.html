@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>jQuery CSS Demo</title>
+	<meta charset="utf-8">
+	<script src="script/jquery.js"></script>
+	<script>
+		$(document).ready(function(){
+			$('p:first').addClass('selected highlight');
+			$('p:last').css({background:'cyan', color:"blue"});
+		});
+	</script>
+	<style type="text/css">
+		p{
+			margin:6px; font-size:16px;
+		}
+		.selected{ color: red;		}
+		.highlight{ background-color: yellow;}
+		}
+	</style>
+</head>
+<body>
+	<p>hello</p>
+	<p>World</p>
+	<p>jQuery</p>
+</body>
+</html>

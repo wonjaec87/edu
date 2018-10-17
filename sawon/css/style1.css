@@ -1,0 +1,22 @@
+
+/*누가 : 전소정
+언제 : 2018 10 5
+왜 : css
+개발환경 : 윈도우8.1 , sublime text*/
+thead > tr > th {
+   background-color: blue;
+}
+
+tbody > tr > td {
+   background-color: yellow;
+}
+
+table {
+   margin: auto; 
+   margin-left: auto;
+}
+
+h1 {
+   text-align: center;
+   text-decoration: underline;
+}

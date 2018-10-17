@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Storage Demo</title>
+	<meta charset="utf-8">
+<script>
+	window.onload = function(){
+		document.querySelector('button').onclick = function(){
+			var name = document.querySelector('#txtname');
+			var age = document.querySelector('#txtage');
+			var address = document.querySelector('#txtaddress');
+			var user= {
+				name : name.value,
+				age : age.value,
+				address : address.value
+			};
+			sessionStorage.setItem('userinfo',JSON.stringify(user));
+				
+			}
+	}
+</script>
+</head>
+<body>
+Name : <input type="text" id="txtname"><br>
+Age : <input type="number" id="txtage"><br>
+Address : <input type="text" id="txtaddress"><br>
+<button type="button">Save</button>
+
+</body>
+</html>

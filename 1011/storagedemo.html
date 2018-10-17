@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Storage Demo</title>
+	<script>
+		window.onload = function(){
+			var storage = window.sessionStorage; //ssession -> local 변경방법 은  session을 local로 변경
+			//var count = storage.getItem('mycount'); 1번째방법
+			//var count = storage.mycount; 2번째방법
+			var count = storage['mycount']; //3번째방법
+			if(count){   //있다면
+				count = parseInt(count) + 1;
+				//storage.setItem("mycount", String(count)); 1번째방법
+				//storage.mycount = String(count);2번째방법
+				storage['mycount'] = String(count);
+				document.getElementById('cnt').innerHTML = count;
+			}else{   //없다면
+				//storage.setItem("mycount", "0"); 1번째방법
+				//storage.mycount = "0"; 2번째방법
+				storage['mycount'] = "0"; //3번째방법
+			}
+		}
+	</script>
+</head>
+<body>
+	방문자 수 : <span id='cnt'>0</span>
+</body>
+</html>

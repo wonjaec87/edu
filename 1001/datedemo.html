@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Date Object Demo</title>
+	<meta charset="utf-8">
+	<meta http-equiv="Refresh" content="1">
+</head>
+<body>
+	<script type="text/javascript">
+		// var now = new Date(2018-10-01);
+		// document.write(now ,'<br>');
+
+		// var now2 = new Date(15385200000);
+		// document.write(now2, '<br>');
+
+		// var now3 = new Date();
+		// document.write(now.toLocaleDateString());
+
+		// var start = new Date();
+		// var start = stat.valueOf(); //시작시간
+		// for(var i = 0; i< 10000000 ; i++){}
+		// 	var end = new Date();
+		// 	end = end.valueOf();
+		// 	document.write((end-start) + 'ms');
+
+		var now = new Date();
+		var hour = now.getHours();
+		var minute = now.getMinutes();
+		var second = now.getSeconds();
+		var str = hour + ":" + minute +":"  + second;
+		document.write(str);
+	</script>
+</body>
+</html>

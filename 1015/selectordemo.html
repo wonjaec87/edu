@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>jQuer selector</title>
+	<meta charset="utf-8">
+	<script src="script/jquery.js"></script>
+	<script>
+		$(document).ready(function(){
+			//$('*').css('margin','0px');
+			$('li:first').css('color','gray');
+			$('li:last').css('color','red');
+			$('li:eq(4)').css('color','orange');
+			/*$('li:even').css('background-color','green');
+			$('li:odd').css('background-color','gray')*/;
+			//$('li:lt(3)').css('background-color','green');
+			//$('li:nth-child(2n+1)').css('background-color','red');
+			
+		});
+	</script>
+</head>
+<body>
+	<ul>Editors
+		<li>Eclipse</li>
+		<li>Visual Studeio Code</li>
+		<li>Sublime Text</li>
+		<li>Notepad++</li>
+		<li>Editplus</li>
+		<li>메모장</li>
+	</ul>
+</body>
+</html>

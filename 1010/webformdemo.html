@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Web Form Demo</title>
+	<meta charset="utf-8">
+	<script type="text/javascript">
+		window.addEventListener('load',init, false);
+		function init(){
+			document.myform.addEventListener('submit', function(evt){
+				evt.preventDefault();//preventDefault는서버에 전송x
+				//document.querySelector('#result').innerHTML = document.myform.birthdate.value;
+				//document.querySelector('#result').innerHTML = document.myform.datetime.value;
+				//document.querySelector('#result').innerHTML = document.myform.mymonth.value;
+				//document.querySelector('#result').innerHTML = document.myform.myweek.value;
+				//document.querySelector('#result').innerHTML = document.myform.mytime.value;
+				document.querySelector('#result').innerHTML = document.myform.mydatetime.value;
+			}, false);
+		}
+	</script>
+</head>
+<body>
+	<form name='myform'>
+		<!-- Your Brith Date : <input type="date" name="brithdate" min="1950-01-01" max="2020-12-31" required><br> -->
+		<!-- Date, Time : <input type="datetime" name="datetime"> -->
+		<!-- datetime은 크롬에서 지원안함 -->
+		<!-- Month : <input type="month" name="mymonth" min="2010-01" max="2020-12"> -->
+		<!-- Week : <input type="week" name="myweek" min="2010-W01" max="2018-W52"> -->
+		<!-- Time : <input type="time" name="mytime"> -->
+		Date, time : <input type="datetime-local" name="mydatetime">
+		<input type="submit" value="Send" ><br>
+		<output id="result"></output>
+	</form>
+</body>
+</html>

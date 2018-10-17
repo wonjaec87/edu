@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>변수 연습</title>
+<meta charset="utf-8">
+</head>
+<body>
+<script type="text/javascript">
+	var str = "45px";
+	document.write(str + 5 + "<br/>");
+	//document.write(eval(str + 5) + "<br/>");
+	document.write(Number(str) + 5 + "<br/>");
+	document.write(parseInt(str) + 5 + "<br/>");
+
+	var str2 = "45";
+	document.write(str2 + 5 + "<br/>");
+	document.write(eval(str2 + 5) + "<br/>");
+	document.write(Number(str2) + 5 + "<br/>");
+	document.write(parseInt(str2) + 5 + "<br/>");
+
+
+	var su;
+	document.write("su = "+ su + "<br/>");
+	// document.write("num = "+ num + "<br/>");
+	var now = new Date();
+	document.write("now is " + now + "<br/>");
+	now = null;
+	document.write("now is " + now);
+
+	if(su==now) document.write("같다");
+	else document.write("다르다");
+</script>
+</body>
+</html>

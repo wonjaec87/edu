@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Select Demo</title>
+	<meta charset="utf-8">
+	<script type="text/javascript">
+		window.onload = function(){
+			var now = new Date();
+			var year = now.getFullYear();
+			var month = now.getMonth() + 1;
+			var day = now.getDate();
+			document.myform.year.selectedIndex = year - 1950;
+			document.myform.month.selectedIndex = month-1;
+			document.myform.day.selectedIndex = day-1;
+		}
+	</script>
+</head>
+<body>
+	<form name = 'myform'>
+	Year :  <select name = 'year'>
+			<script>
+				for(var i = 1950; i <=2050; i++){
+					document.write("<option value='" + i + "'>" + i + '</option>');
+				}
+			</script>&nbsp;&nbsp;&nbsp;
+			</select>
+	Month :  <select name = 'month'>
+			<script>
+				for(var i = 1; i <=12; i++){
+					document.write("<option value='" + i + "'>" + i + '</option>');
+				}
+			</script>&nbsp;&nbsp;&nbsp;
+			</select>
+	Day :  <select name = 'day'>
+			<script>
+				for(var i = 1; i <=31; i++){
+					document.write("<option value='" + i + "'>" + i + '</option>');
+				}
+			</script>
+			</select>
+
+</myform>
+
+</body>
+</html>

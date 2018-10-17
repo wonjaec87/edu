@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Object Demo</title>
+	<meta charset="utf-8">
+</head>
+<body>
+	<script type="text/javascript">
+		var str = "Hello, World";
+		document.write(typeof(str) + '<br>'); //string
+		var str1 =  new String('hello world');
+		document.write(typeof(str1) + '<br>'); //object
+		var str2 =  String('hello world');
+		document.write(typeof(str2) + '<br>');//string
+		var str3 = str1.valueOf(); //object --> primitive type
+		document.write(typeof(str3)); //string
+
+		var str4 = new String(str);
+
+
+		// var num = 5;
+		// var num1 = new Number(num);
+		// var num2 = num1.valueOf();
+	</script>
+</body>
+</html>

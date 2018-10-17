@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>jQuery Property Demo</title>
+	<meta charset="utf-8">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script>
+		
+		$(document).ready(setup);
+		function setup(){
+			//$('button').attr("disabled", "disabled");
+			//$('button').prop('disabled', 'true');
+			//$("input[type='text']").attr("required","required");
+			$('input').prop('required',true);
+			//$('input').removeProp('required');
+		}
+	</script>
+</head>
+<body>
+	<form>
+		<input type="text" id="username">
+	<button type="submit">버튼임</button>
+</form>
+</body>
+</html>

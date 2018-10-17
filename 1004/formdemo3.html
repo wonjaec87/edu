@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Radio Button & Checkbox button Demo</title>
+	<meta charset="utf-8">
+	<script type="text/javascript">
+		window.onload = function(){
+			document.myform.btn_result.onclick = myclick;
+		}
+		function myclick(){
+			var str = '귀하의 취미는';
+			var hobys = document.myform.hoby;
+			for(var i=0; i<hobys.length; i++){
+				if(hobys[i].checked) str += hobys[i].value +',';
+			}
+			str = str.substring(0,str.length -1) + '이고 <br>';
+			str += "귀하가 가장 좋아하시는 계절은 <span style='color:red'>";
+			var seasons = document.myform.season;
+			for(i=0;i<seasons.length;i++){
+				if(seasons[i].checked) str += seasons[i].value + '</span>입니다.';
+			}
+			document.myform.result.innerHTML = str;
+		}
+	</script>
+</head>
+<body>
+	<form name = 'myform'>
+		<div>
+			취미 : <br>
+			<input type="checkbox" name="hoby" value="등산">등산 &nbsp;&nbsp;
+			<input type="checkbox" name="hoby" value="낚시">낚시 &nbsp;&nbsp;
+			<input type="checkbox" name="hoby" value="바둑">바둑 &nbsp;&nbsp;
+			<input type="checkbox" name="hoby" value="게임">게임 &nbsp;&nbsp;
+			<input type="checkbox" name="hoby" value="독서">독서 &nbsp;&nbsp;
+			<input type="checkbox" name="hoby" value="영화">영화 &nbsp;&nbsp;
+		</div>
+		 <br>
+		 <br>
+		<div>
+			좋아하는계절 <br>
+			<input type="radio" name="season" value="spring">봄 &nbsp;&nbsp;
+			<input type="radio" name="season" value="summer">여름 &nbsp;&nbsp;
+			<input type="radio" name="season" value="fall">가을 &nbsp;&nbsp;
+			<input type="radio" name="season" value="winter">겨울 &nbsp;&nbsp;
+		</div>
+		<br>
+		<br>
+		<div>
+			<button type="button" name="btn_result">결과</button><br>
+			<output name="result"> 
+			</output>
+	</form>
+</body>
+</html>

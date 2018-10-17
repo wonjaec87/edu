@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="UTF-8">
+	<title>jQuery Traversing Demo</title>
+	<script src="script/jquery.min.js"></script>
+	<script>
+		$().ready(function(){
+			$('p').each(function(idx){ //each 반복문
+				$(this).attr('id', idx);
+				$(this).click(function(){
+					alert("아이디는 " + $(this).attr('id') + '입니다.');
+				});
+			});
+		});
+	</script>
+	</head>
+	<body>
+		<p>Java</p>
+		<p>Oracle</p>
+		<p>jQuery</p>
+	</body>
+</html>
+
+
+
+

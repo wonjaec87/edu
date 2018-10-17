@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Web Form Demo</title>
+	<meta charset="utf-8">
+	<script type="text/javascript">
+		window.addEventListener('load',function(){
+			document.myform.addEventListener('input',function(){
+				var message = document.myform.mytextarea;
+				document.myform.btnsend.disabled = message.value.length <= 0 || message.value.length >140;
+				document.myform.result.value = 140 - message.value.length;
+			},false);
+		}, false);
+	</script>
+</head>
+<body>
+	<form name='myform'>
+		<output name="result">140</output>자. <br>
+		<textarea name="mytextarea" cols="40" rows="5"></textarea><br>
+		<button type="submit" name='btnsend' disabled="disabled">Send</button>
+		
+	</form>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>jQuery Manipulation Demo</title>
+<script src="script/jquery.min.js"></script>
+<script>
+	$().ready(function(){
+		$('<hr/>').insertAfter('.content');
+		$('.content:gt(0)').after("<a href='#'>Top</a>");
+		
+	});
+</script>
+<style type="text/css">
+	.chp{
+	
+	}
+	.content{
+		border : 1px solid black;
+		background-color : yellow;
+	}
+</style>
+</head>
+<body>
+	<p class="chp"><div class="content">서론 텍스트 텍스트텍스트</div></p>
+	<p class="chp"><div class="content">본론 텍스트 텍스트텍스트</div></p>
+	<p class="chp"><div class="content">결론 텍스트 텍스트텍스트</div></p>
+
+</body>
+</html>

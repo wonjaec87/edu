@@ -1,0 +1,29 @@
+/*누가 : 전소정
+언제 : 2018 10 5
+왜 : css
+개발환경 : 윈도우8.1 , sublime text*/
+h1 { 
+   text-align: center; 
+   text-decoration: underline;
+}
+div > h5{
+   margin-left: 250px;
+}
+table {
+   margin: auto; 
+   margin-left: auto;
+}
+div {
+   text-align: center;
+}
+tbody > tr > th {
+   color: white;
+   background-color: blue;
+}
+hr {
+   width: 350px;
+}
+
+#txtNum, #txtName, #txtGibon, #txtNightsal, #txtFam{
+background-color: yellow;
+}

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Event Demo</title>
+	<meta charset="utf-8">
+	<script type="text/javascript">
+		window.onload = setup;
+		function setup(){
+			document.getElementsByTagName('button')[0].onclick = function(){
+				document.body.style.backgroundColor = 'yellow';
+			}
+			document.getElementsByTagName('button')[1].onclick = function(){
+				document.body.style.backgroundColor = 'Cyan';
+			}
+		}
+
+		/*function change(color){
+			document.body.style.backgroundColor = color;
+		}*/
+
+	</script>
+</head>
+<body>
+	<!-- DOM LEVEL 0 중 Traditional Model -->
+	<button type="button">Yellow</button>
+	<button type="button">Cyan</button>
+
+<!-- 	DOM LEVEL 0 중 INline Model
+	<button type="button" onclick="change('yellow')">yellow</button>
+	<button type="button" onclick="change('cyan')">cyan</button> -->
+</body>
+</html>

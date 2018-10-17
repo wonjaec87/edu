@@ -1,0 +1,27 @@
+
+body{
+    background-color: khaki;
+}
+table{
+    
+    width: 500px;
+    text-align: center;
+    border : 2px solid #ADD8E6;
+    margin : auto;
+    
+}
+th,td{
+    border:2px solid skyblue;
+}
+h1{
+    text-align: center;
+}
+span{
+    font-weight: bold;
+    color: orange;
+    font-size: 30px
+}
+.lo{
+    text-align: left;
+    
+}

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>this Demo</title>
+	<meta charset="utf-8">
+	<script type="text/javascript">
+		function copy(f){
+			f.txtTarget.value = f.txtSoure.value;
+		}
+
+	</script>
+</head>
+<body>
+	<form name = 'myform'>
+		Source : <input type="text" name="txtSoure">
+		<input type="button" name="btncopy" value="Copy" onclick="copy(this.form)">
+		Target : <input type="text" name="txtTarget">
+	</form>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Loop Demo</title>
+	<meta charset="utf-8">
+</head>
+<body>
+<script type="text/javascript">
+	var car = {name:'Sonata',price:2500000,maker:'Hyundai'};
+	 var array = ['Apple','Mango','Orange','Peach','Grape','lemon'];
+	 // for(var i = 0; i<array.length; i++)
+	 // 	document.write(array[i] + '&nbsp;&nbsp;&nbsp; <br>');
+
+for(var idx in array){
+	document.write(array[idx] + '&nbsp;&nbsp;&nbsp;');
+}
+document.write('<br>');
+//delete car.price;
+for(var str in car){
+	document.write(str + '-->' + car[str] + '<br>');
+
+}
+</script>
+</body>
+</html>

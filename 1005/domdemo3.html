@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>DOM Demo</title>
+	<meta charset="utf-8">
+	<script type="text/javascript">
+		window.onload = function(){
+			var newP = document.createElement('p');
+			var newText = document.createTextNode('이것은 javascript에서 생성한 단락입니다.');
+			newP.appendChild(newText);
+			document.getElementsByTagName('body')[0].appendChild(newP)
+		}
+	</script>
+</head>
+<body>
+	<h2> 나는 헤드라인 태그 </h2>
+</body>
+</html>

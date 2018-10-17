@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>jQuery Attibute Demo</title>
+	<meta charset="utf-8">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script>
+		$(document).ready(setup);
+		function setup(){
+			$('button:first').click(function(){
+				$('p').attr('style',"color:red; font-size:2em; textDecoration = 'overline'");
+			});
+			$('button:last').click(function(){
+				$('p').removeAttr('style');
+			});
+		}
+	</script>
+</head>
+<body>
+	<p> This is a paragraph.</p>
+
+	<button type="button">스타일추가</button>
+	<button type="button">스타일제거</button>
+</body>
+</html>
