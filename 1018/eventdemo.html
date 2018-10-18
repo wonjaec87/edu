@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>jQuery Event Demo</title>
+	<script src="script/jquery.min.js"></script>
+	<script>
+		$(function(){
+			var count = 0;
+			$('button').one('click',function(){
+				count ++;
+				console.log('count = ' + count);
+			});
+		});
+	</script>
+</head>
+<body>
+	<h1> Event one()</h1>
+	<div id="container">
+		<p>
+			<button>click me</button>
+		</p>
+</body>
+</html>
